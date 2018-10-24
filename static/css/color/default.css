@@ -37,7 +37,6 @@
 
 .section-title h2 span,
 .fixed-header .logo,
-.fixed-header .logo a, 
 .header .navbar-nav > li > a:hover,
 .portfolio-box .filter button.mixitup-control-active,
 .portfolio-box .filter button:hover,
@@ -48,6 +47,10 @@
 .resume-box h4,
 .widget .widget-title {
 	color:  #00973c;
+}
+
+.fixed-header .logo a,  {
+	color:  #000000;
 }
 
 .contact-us .form-control:focus,
