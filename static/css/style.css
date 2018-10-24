@@ -560,7 +560,7 @@ a.m-btn-01:active {
 
 @media (max-width: 991px){
   .particles-box {
-    height: 120vh;
+    height: 100vh;
   }
 
   .fixed-header-body .particles-box {
@@ -785,7 +785,7 @@ a.m-btn-01:active {
 
 @media (max-width: 767px){
 	.service-box-01 {
-		margin: 15px 0;
+		margin: 35px 0;
 	}
 }
 
@@ -1022,7 +1022,7 @@ a.m-btn-01:active {
 	background: #333;
 	color: #fff;
 	font-size: 14px;
-	margin: 0 10px;
+	/* margin: 0 10px; */
 	box-shadow: 0px 0px 1px 3px rgba(0,0,0,0.1), 0px 0px 1px 8px rgba(0,0,0,0.05);
 	padding: 6px 15px;
 	border-radius: 30px;
