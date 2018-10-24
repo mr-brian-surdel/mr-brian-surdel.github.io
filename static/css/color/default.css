@@ -36,7 +36,6 @@
 }
 
 .section-title h2 span,
-.fixed-header .logo,
 .header .navbar-nav > li > a:hover,
 .portfolio-box .filter button.mixitup-control-active,
 .portfolio-box .filter button:hover,
@@ -49,7 +48,8 @@
 	color:  #00973c;
 }
 
-.fixed-header .logo a,  {
+.fixed-header .logo a,
+.fixed-header .logo  {
 	color:  #000000;
 }
 
