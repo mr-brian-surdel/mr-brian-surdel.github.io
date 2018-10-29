@@ -33,6 +33,15 @@
     <script src="static/js/html5shiv.min.js"></script>
     <script src="static/js/respond.min.js"></script>
   <![endif]-->
+	
+	  <!-- Google Recapcha -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("contact_form").submit();
+       }
+     </script>
+	  <!-- End Google Recapcha -->
 </head>
 
 <!-- ========== Body Starts ========== -->
@@ -291,7 +300,7 @@
   <section class="call-to-action-01 bg-cover bg-no-repeat" style="background-image: url(static/img/fall-hire.gif);background-size: cover;background-repeat: no-repeat;background-position: bottom;background-blend-mode: overlay;background-color: currentColor">
       <div class="container">
         <h2>I am Available for Freelance</h2>
-        <a href="mailto:mr.brian.surdel@gmail.com"><button class="m-btn-01 m-btn-01-black">hire me Now</button></a>
+        <a href="#contact"><button class="m-btn-01 m-btn-01-black">hire me Now</button></a>
       </div><!-- .container -->
     </section><!-- .call-to-action -->
   <!-- ========== End Of CTA ========== -->
@@ -577,7 +586,7 @@ I can guarantee you that I will always use BMI and Brian if I ever have to build
       <div class="row">
         <div class="col-sm-7 col-xs-12 col-md-7">
           <div class="contact-form-01">
-          <form id="contact_form">
+          <form id="contact_form" method="POST" action="static/contact-logic.php">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -590,32 +599,32 @@ I can guarantee you that I will always use BMI and Brian if I ever have to build
                 <div class="form-group">
                   <label class="sr-only">Email</label>
                   <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                  <input class="form-control" name="name" placeholder="Email" type="email">
+                  <input class="form-control" name="email" placeholder="Email" type="email">
                 </div>    
               </div><!-- .col-md-6 -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="sr-only">Phone</label>
                   <i class="fa fa-phone" aria-hidden="true"></i>
-                  <input class="form-control" name="name" placeholder="Phone" type="text">
+                  <input class="form-control" name="phone" placeholder="Phone" type="text">
                 </div>    
               </div><!-- .col-md-6 -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="sr-only">Website</label>
                   <i class="fa fa-link" aria-hidden="true"></i>
-                  <input class="form-control" name="name" placeholder="Website" type="email">
+                  <input class="form-control" name="website" placeholder="Website" type="email">
                 </div>    
               </div><!-- .col-md-6 -->
               <div class="col-md-12">
                 <div class="form-group">
                   <label class="sr-only">Your message</label>
-                  <textarea class="form-control" name="message" rows="7" placeholder="Your message"></textarea>
+                  <textarea class="form-control" name="comments" rows="7" placeholder="Your message"></textarea>
                 </div>
               </div><!-- .col-md-12 -->
               <div class="col-md-12">
                 <div class="action">
-                  <button class="m-btn-01 lets-talk">Send Message <i class="fa fa-arrow-right"></i></button>
+                  <button class="m-btn-01 lets-talk" type="submit">Send Message <i class="fa fa-arrow-right"></i></button>
                 </div>
               </div><!-- .col-md-12 -->
             </div><!-- .row -->
