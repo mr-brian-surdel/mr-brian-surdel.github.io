@@ -1,0 +1,40 @@
+from ftplib import FTP
+
+# FTP server details
+ftp_host = "ftp.example.com"
+ftp_user = "your_username"
+ftp_password = "your_password"
+
+# Connect to the FTP server
+ftp = FTP(ftp_host)
+ftp.login(ftp_user, ftp_password)
+
+# Base directory on the FTP server where you want to upload files
+ftp_base_directory = "/public_html/apeximages"
+
+# List of directories containing images
+directories_to_upload = [
+    "michigan-beach-house",
+    # Add more directory names here
+]
+
+# Loop through each directory and upload its contents
+for directory in directories_to_upload:
+    local_directory = f"C:/Users/danger/Desktop/apeximages/{directory}"
+    remote_directory = f"{ftp_base_directory}/{directory}"
+
+    # Create the remote directory if it doesn't exist
+    ftp.mkd(remote_directory)
+
+    # Upload files from the local directory to the remote directory
+    for filename in os.listdir(local_directory):
+        local_filepath = os.path.join(local_directory, filename)
+        remote_filepath = f"{remote_directory}/{filename}"
+
+        with open(local_filepath, "rb") as local_file:
+            ftp.storbinary(f"STOR {remote_filepath}", local_file)
+
+# Close the FTP connection
+ftp.quit()
+
+print("Upload completed successfully!")

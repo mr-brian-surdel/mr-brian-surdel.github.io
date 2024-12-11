@@ -1,0 +1,6 @@
+<div style="margin-top: 30px; margin-bottom: 30px;">
+    <h2><strong>Project Name:</strong>  Apex Wood Floors Showroom – Chicago</h2><br>
+    <h3><strong>Project Location:</strong>Chicago, IL</h3><br>
+    <strong>Wood Species:</strong> French Oak<br>
+    <strong>Product Reference:</strong> Custom Board House<br>
+</div>
